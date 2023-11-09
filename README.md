@@ -2,9 +2,9 @@
 
 ### How to install:
 
-python -m venv shop_venv
-source shop_venv/bin/activate or shop_venv\Scripts\activate
-pip install -r requirements
+python -m venv shop_venv;
+source shop_venv/bin/activate or shop_venv\Scripts\activate;
+pip install -r requirements;
 
 ##### Run migrations:
 
