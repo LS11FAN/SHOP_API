@@ -29,5 +29,5 @@ def remove_from_cart(request, cart_item_id):
 def cart_detail(request):
     cart_items = CartItem.objects.filter(user=request.user)
     total_quantity = cart_items.aggregate(total_quantity=Sum('quantity'))['total_quantity']
-    return render(request, 'cart/cart_detail.html',
+    return render(request, 'cart_details.html',
                   {'cart_items': cart_items, 'total_quantity': total_quantity})
