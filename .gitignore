@@ -1,0 +1,10 @@
+__pycache__
+.idea
+.ipynb_checkpoints/
+.env
+**venv/
+posts/
+../../todos.json
+../../.idea/
+db.sqlite3
+../../main.py

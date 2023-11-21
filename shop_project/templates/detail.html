@@ -15,5 +15,17 @@
         <img src="{{ product.image.url }}" alt="{{ product.name }}">
         <p class="price">${{ product.price }}</p>
         {{ product.description|linebreaks }}
+        <h2>Отзывы</h2>
+        {% for review in reviews %}
+            <p>{{ review.content }}</p>
+        {% empty %}
+            <p>Нет отзывов</p>
+        {% endfor %}
+        <h2>Добавить отзыв</h2>
+        <form method="post" action="{% url 'products:product_detail' product_id=product.id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit">Отправить</button>
+</form>
     </div>
 {% endblock %}
