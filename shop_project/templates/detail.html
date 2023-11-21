@@ -22,10 +22,10 @@
             <p>Нет отзывов</p>
         {% endfor %}
         <h2>Добавить отзыв</h2>
-        <form method="post" action="{% url 'products:product_detail' product_id=product.id %}">
+        <form method="post" action="{% url 'product_detail' id=product.id slug=product.slug %}">
             {% csrf_token %}
             {{ form.as_p }}
         <button type="submit">Отправить</button>
-</form>
+        </form>
     </div>
 {% endblock %}
